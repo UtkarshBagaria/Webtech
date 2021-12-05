@@ -21,16 +21,6 @@ body {
 
 #calendarContainer,
 #organizerContainer {
-  /* float: left; */
+  float: left;
   margin: 5px;
-}
-.reminder
-{
-    position: absolute; 
-    bottom:0%;
-}
-.workandstudy
-{
-  position: absolute;
-  top: 0%;
 }

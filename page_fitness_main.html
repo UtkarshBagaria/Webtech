@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <style>
+        /* .subcat{
+                background-color:lightcoral;
+                margin: 10px;
+                width: 200px;
+                height: 300px;
+                border: 2px solid;
+            } */
+
+        .header {
+            font-family: Arial;
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        /* .info {
+                background-color: lightblue;
+                width: 100%;
+                padding: 20px;
+                margin: auto;
+                margin-top: 20px;
+            }
+
+            .subcat {
+                display:inline-block;
+                position: relative;
+                margin: 25px 10px 0px 25px;
+                float:left;
+                width:250px;
+                height:300px;
+                background-color: rgb(240, 137, 137);
+            } */
+
+        .info {
+            background-color: lightblue;
+            width: 100%;
+            padding: 20px;
+            margin: auto;
+            /* margin-top: 20px; */
+        }
+
+        .subcat {
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            margin: 38px 10px 5px 200px;
+            /* margin: 50px auto; */
+            /* float:left; */
+            /* width:500px; */
+            width: 50%;
+            height: 300px;
+            background-color: rgb(240, 137, 137);
+        }
+
+        /* Footer */
+        .footer {
+            font-family: Arial;
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        .bottomnav {
+            overflow: hidden;
+            /* background-color: #333; */
+        }
+
+        .bottomnav a {
+            /* float: left; */
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .bottomnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 5px;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="header">
+        <h1>Day2Day</h1>
+    </div>
+    <div class="info" style="height: 420px;">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="subcat">
+                    <svg  width="80" height="80">
+                        <defs>
+                            <clipPath id="circleView">
+                                <circle cx="40" cy="40" r="40" fill="#FFFFFF" />
+                            </clipPath>
+                        </defs>
+                        <image 
+                          width="80" 
+                          height="80" 
+                          xlink:href="https://www.health-total.com/wp-content/uploads/2019/10/bmi-chart-img.jpg" 
+                          clip-path="url(#circleView)"
+                        />
+                     </svg>
+                    <h4 align="center">BMI Calclator</h4>
+                    <div id="BMI">
+                        <p>Advantages of BMI</p>
+                        <ul style="font-size: 12px;">
+                            <li>BMI is a simple, inexpensive, and noninvasive surrogate measure of body fat.</li>
+                            <li>BMI relies solely on height and weight and with access to the proper equipment</li>
+                        </ul>
+                    </div>
+                    <button onclick="window.open('http://127.0.0.1:5500/page_fitness_bmi.html','_self')">Try Now</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="subcat">
+                    <svg  width="80" height="80">
+                        <defs>
+                            <clipPath id="circleView">
+                                <circle cx="40" cy="40" r="40" fill="#FFFFFF" />
+                            </clipPath>
+                        </defs>
+                        <image 
+                          width="80" 
+                          height="80" 
+                          xlink:href="https://images-na.ssl-images-amazon.com/images/I/81a0qQujlXL.jpg" 
+                          clip-path="url(#circleView)"
+                        />
+                     </svg>
+                    <h4 align="center">Calorie Counter</h4>
+                    <div id="CALC">
+                        <p>Advantages of Calorie Caculator</p>
+                        <ul style="font-size: 15px;">
+                            <li>It can lead to better food choices.</li>
+                            <li>It can encourage you to exercise. </li>
+                            <li>It can be nutritionally incomplete.</li>
+                        </ul>
+                    </div>
+                    <button onclick="window.open('http://127.0.0.1:5500/page_fitness_calcalc.html','_self')">Try Now</button>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <div class="subcat">
+                    <svg  width="80" height="80">
+                        <defs>
+                            <clipPath id="circleView">
+                                <circle cx="40" cy="40" r="40" fill="#FFFFFF" />
+                            </clipPath>
+                        </defs>
+                        <image 
+                          width="80" 
+                          height="80" 
+                          xlink:href="https://samanthavaland.com/wp-content/uploads/2016/08/HealthCalc-BMR.jpg" 
+                          clip-path="url(#circleView)"
+                        />
+                     </svg>
+                    <h4 align="center">BMR Calclator</h4>
+                    <div id="BMR">
+                        <p>Advantages of BMR</p>
+                        <ul style="font-size: 18px;">
+                            <li>BMR helps the body burn calories</li>
+                            <li>You can prevent unwanted weight gain and weight loss.</li>
+                        </ul>
+                    </div>
+                    <button>Try Now</button>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <div class="footer">
+
+        <div class="bottomnav">
+            <a href="#help" style="float: left;">Premium</a>
+            <a href="#login" style="float: left;">Blog</a>
+            <a href="#help" style="float: left;">Features</a>
+            <a href="#login" style="float: right;">Resources</a>
+            <a href="#help" style="float: right;">About</a>
+            <a href="#login" style="float: right;">Support</a>
+        </div>
+        <hr />
+        <h2>Day2Day</h2>
+    </div>
+</body>
+
+</html>
