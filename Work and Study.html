@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="workandstudy.css">
+        <script src="Workstudy.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>
             Work and Study
         </title>
     </head>
     <body>
+        <div class="heading">
         <h1>Work and Study</h1>
-        <div>
-            <div>
-                <h4>TO DO LIST</h4>
+        </div>
+        <div class="left">
+            
+        <div class="insleft">
+            <div class="subhead">
+                <h2>TO DO LIST</h2>
             </div>
+            <br>
             <form>
-                <div>
-                    <p>Subject 1 <button>+</button></p>
+                <div class="subbox">
+                    Subject 1 <input type="button" class="plus" id="plus1" onclick="myfun1()" value="+">
                 </div>
-                <div>
+                <div id="sub1" class="sub1" style="display: none;">
                     <button>>Notes</button><br>
                     <button>>Codes</button><br>
-                    <button>>Questions</button><br>
+                    <button>>Questions</button><br><br>
                 </div>
             </form>
         </div>
-        <div>
+        <br>
+        <div class="insleft">
             <form>
-                <div>
-                    <p>Subject 2 <button>+</button></p>
+                <div class="subbox">
+                    Subject 2 <input type="button" class="plus" id="plus2" onclick="myfun2()" value="+">
                 </div>
-                <div>
+                <div id="sub2" class="sub1" style="display: none;">
                     <button>>Notes</button><br>
                     <button>>Codes</button><br>
-                    <button>>Questions</button><br>
+                    <button>>Questions</button><br><br><br>
                 </div>
             </form>
         </div>
-        <div>
+        <br>
+        <div class="insleft">
             <form>
-                <div>
-                    <p>Subject 3 <button>+</button></p>
+                <div class="subbox">
+                    Subject 3 <input type="button" class="plus" id="plus3" onclick="myfun3()" value="+">
                 </div>
-                <div>
+                <div id="sub3" class="sub1" style="display: none;">
                     <button>>Notes</button><br>
                     <button>>Codes</button><br>
-                    <button>>Questions</button><br>
+                    <button>>Questions</button><br><br><br>
                 </div>
             </form>
         </div>
-        <div>
+        <br>
+        <div class="insleft">
             <form>
-                <div>
-                    <p>Subject 4 <button>+</button></p>
+                <div class="subbox">
+                    Subject 4 <input type="button" class="plus" id="plus4" onclick="myfun4()" value="+">
                 </div>
-                <div>
+                <div id="sub4" class="sub1" style="display: none;">
                     <button>>Notes</button><br>
                     <button>>Codes</button><br>
-                    <button>>Questions</button><br>
+                    <button>>Questions</button><br><br><br>
                 </div>
             </form>
+        </div>
+        <br>
         </div>
     </body>
 </html>

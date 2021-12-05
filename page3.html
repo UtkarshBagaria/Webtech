@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <link rel="stylesheet" href="style3.css">
         <title>
             CHOOSE 
         </title>
     </head>
     <body>
-        <h1>CHOOSE THE SECTIONS YOU WOULD LIKE TO START WITH</h1>
+        <h1 id="heading">CHOOSE THE SECTIONS YOU WOULD LIKE TO START WITH</h1>
         <form>
-            <div>
-                <div>
-                    <p>Notes+<br>
-                    Make notes for each subject and keep them sorted easily</p>
+            
+            <div class="right">
+                
+                <div class="inf">
+                    Notes+<br>
+                    Make notes for each subject and keep them sorted easily
                     <input type="checkbox">
                 </div>
-                <div>
-                    <img src="#" alt="Image not available">
+                <div class="img">
+                    <img src="notes.png" alt="Image not available">
                 </div>
             </div>
-            <div>
-                <div>
-                    <p>To-do list <br>
-                    Keep track of your tasks easily</p>
+            <br>
+            <br>
+            <div class="left">
+                <div class="inf">
+                    To-do list <br>
+                    Keep track of your tasks easily
                     <input type="checkbox">
                 </div>
-                <div>
-                    <img src="#" alt="Image not available">
+                <div class="img">
+                    <img src="to do list.jpg_fit=scale" alt="Image not available">
                 </div>
             </div>
-            <div>
-                <div>
-                    <p>Fitness Tracking <br>
-                    Track your calories,BMI,Metabolism rate,and steps all in one place.</p>
+            <br>
+            <br>
+            <div class="right">
+                <div class="inf">
+                    Fitness Tracking <br>
+                    Track your calories,BMI,Metabolism rate,and steps all in one place.
                     <input type="checkbox">
                 </div>
-                <div>
-                    <img src="#" alt="Image not available">
+                <div class="img">
+                    <img src="fitness tracking.png" alt="Image not available">
                 </div>
             </div>
-            <div>
-                <div>
-                    <p>Entertainment <br>
+            <br>
+            <br>
+            <div class="left" >
+                <div class="inf">
+                    Entertainment <br>
                     See upcoming movies<br>
-                    Keep a watch-list.</p>
+                    Keep a watch-list.
                     <input type="checkbox">
                 </div>
-                <div>
-                    <img src="#" alt="Image not available">
+                <div class="img">
+                    <img src="entertainment.cms" alt="Image not available">
                 </div>
             </div>
-            <div>
-                <div>
-                    <p>News and weather <br>
+            <br>
+            <br>
+            <div class="right">
+                <div class="inf">
+                    News and weather <br>
                     Weather and news based on the location<br>
-                    you are residing in.</p>
+                    you are residing in.
                     <input type="checkbox">
                 </div>
-                <div>
-                    <img src="#" alt="Image not available">
+                <div class="img">
+                    <img src="weather-news.jpg" alt="Image not available">
                 </div>
             </div>
         </form>
